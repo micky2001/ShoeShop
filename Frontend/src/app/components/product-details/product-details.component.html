@@ -1,0 +1,28 @@
+<div class="detail-section">
+  <div class="container-fluid">
+    <div class="row align-items-start">
+        <div class="col-md-auto">
+          <img class="product-img img-responsive" src="{{ product.imgUrl }}" alt="{{ product.productName}}">
+
+          <div class="price">{{ product.price | currency:'' }}</div>
+          <button (click)="addToCart()" class="btn btn-primary btn-sm">Add to cart</button>
+        </div>
+
+        <div class="col-sm ">
+          <h3>{{ product.productName }}</h3>
+          <h5>Category :</h5> <p>{{ product.category}}</p>
+          <h5>Color :</h5><p> {{ product.color}}</p>
+          <h5>Size :</h5> <p>{{ product.size}}</p>
+          <h5>Gender :</h5><p> {{ product.gender}}</p>
+          <h4>Description</h4>
+          <p>{{ product.pdesc }}</p>
+
+        </div>
+
+          <a routerLink="/products" class="mt-5">Back to Product List</a>
+    </div>
+  </div>
+</div>
+
+
+
